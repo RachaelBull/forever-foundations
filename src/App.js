@@ -4,16 +4,16 @@ import Container from "react-bootstrap/Container";
 import { Route, Switch } from "react-router-dom";
 import './api/axiosDefaults';
 import SignUpForm from "./pages/auth/SignUp";
+import SignInForm from "./pages/auth/SignIn";
 
 
 function App() {
   return (
     <div className={styles.App}>
        <NavBar />
-       <Container className={styles.Main}>
         <Switch>
           <Route exact path="/" render={() => <h1>Home page</h1>} />
-          <Route exact path="/signin" render={() => <h1>Sign in</h1>} />
+          <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/gettingmarriedinitaly" render={() => <h1>Getting Married In Italy</h1>} />
           <Route exact path="/gettingmarriedintheuk" render={() => <h1>Getting Married In The UK</h1>} />
@@ -23,7 +23,6 @@ function App() {
           <Route exact path="/budgetfriendlytips" render={() => <h1>Budget Friendly Tips</h1>} />
           <Route render={() => <p>The Page You Are Looking For Has Not Been Found.</p>} />
         </Switch>
-       </Container>
     </div>
   );
 }

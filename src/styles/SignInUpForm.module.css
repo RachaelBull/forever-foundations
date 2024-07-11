@@ -18,3 +18,15 @@
     padding: 10px;
     font-family: Merriweather, sans-serif;
 }
+
+.background {
+    height: 100vh;
+    margin-top: -70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.signinhead {
+    padding-top: 60px;
+}
