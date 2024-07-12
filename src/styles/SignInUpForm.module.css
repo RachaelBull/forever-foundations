@@ -11,7 +11,13 @@
     text-align: center;
     display: block;
     margin: auto;
+    padding-top: 15px;
+    color: whitesmoke;
   }
+
+.Link:hover {
+    color: rgb(102, 53, 0);
+}
 
 .input {
     text-align: center;
@@ -21,12 +27,43 @@
 
 .background {
     height: 100vh;
-    margin-top: -70px;
+    margin-top: 30px;
+    margin-bottom: 70px;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    position: fixed;
 }
 
 .signinhead {
-    padding-top: 60px;
+    margin-top: 70px;
+    padding-top: 65px;
+}
+
+.signincontainer {
+    margin-left: 60%;
+    width: 80%;
+    margin-top: 15%;
+    background-color: rgb(51, 51, 51, 0.2);
+    color: whitesmoke;
+}
+
+/*Mobile Media Query*/
+
+@media only screen and (max-width: 767px) {
+    .signincontainer {
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .signincontainer {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .signincontainer {
+        width: 80%;
+    }
 }
