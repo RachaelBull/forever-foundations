@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import signuppic from "../../assets/sign-up-pic.jpg"
 import appStyles from "../../App.module.css";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import signinbg from "../../assets/sign-up-pic.jpg"
 import axios from "axios";
 
 import { Button, Form, Image, Col, Row, Container, Alert} from "react-bootstrap";
@@ -39,10 +39,11 @@ const SignUpForm = () => {
 
 
   return (
+    <div className={styles.background} style={{ backgroundImage: `url(${signinbg})`}}>
     <Row>
       <Col className="my-auto py-2 p-md-2" md={6}>
-        <Container className= "p-4">
-          <h1 className={styles.header}>Sign Up</h1>
+        <Container className={`${styles.signincontainer} p-4 `}>
+          <h1 className={styles.header}>sign up</h1>
 
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formBasicEmail">
@@ -102,24 +103,15 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
+                      <Link className={styles.Link} to="/signin">
+            Already have an account? <span>Sign In</span>
+          </Link>
           </Form>
 
         </Container>
-        <Container>
-          <Link className={styles.Link} to="/signin">
-            Already have an account? <span>Sign In</span>
-          </Link>
-        </Container>
-      </Col>
-      <Col
-        md={6}
-        className="my-auto d-none d-md-block p-2"
-      >
-        <Image className={`${appStyles.FillerImage}`}
-          src={signuppic} alt="two gold wedding rings"
-        />
       </Col>
     </Row>
+    </div>
   );
 };
 
