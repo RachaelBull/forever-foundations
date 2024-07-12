@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import appStyles from "../../App.module.css";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import signinbg from "../../assets/sign-up-pic.jpg"
 import axios from "axios";
 
-import { Button, Form, Image, Col, Row, Container, Alert} from "react-bootstrap";
+import { Button, Form, Col, Row, Container, Alert} from "react-bootstrap";
 
 const SignUpForm = () => {
     const [signUpData, setSignUpData] = useState({
