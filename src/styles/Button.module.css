@@ -15,3 +15,15 @@
     background-color: whitesmoke;
     color: rgb(102, 53, 0);
 }
+
+/* not sure how to active these 2 */
+.signupbtn:hover:active {
+    background-color: whitesmoke !important;
+    color: rgb(102, 53, 0);
+  }
+  
+.signupbtn:active {
+    background-color: whitesmoke !important;
+    color: rgb(102, 53, 0);
+  }
+  /*   --------------------         */
