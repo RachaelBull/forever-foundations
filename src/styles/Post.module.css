@@ -1,0 +1,21 @@
+
+
+.Container {
+    min-height: 343px;
+    border: 2px solid black;
+    margin-top: 100px;
+}
+
+.btnContainer {
+    margin-top: 100px;
+    min-height: 85px;
+    border: 2px solid black;
+    padding-top: 20px;
+}
+
+.imgupload {
+    margin-top: 25px;
+    max-height: 40vh;
+    max-width: 100%;
+    object-fit: contain;
+}
