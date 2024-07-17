@@ -2,8 +2,12 @@
 
 .Container {
     min-height: 343px;
-    border: 2px solid black;
+    border: 2px solid rgb(204, 204, 204);
+    border-radius: 3%;
     margin-top: 100px;
+    background-color: rgb(242, 242, 242, 0.7);
+    font-family: Merriweather, sans-serif;
+    color: #737373;
 }
 
 .btnContainer {

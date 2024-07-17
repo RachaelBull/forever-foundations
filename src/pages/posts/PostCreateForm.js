@@ -6,12 +6,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import { Image } from "react-bootstrap";
+import PostBackground from "../../assets/post-bg.jpg"
 
 import Upload from "../../assets/upload-icon.png";
 
 import styles from "../../styles/Post.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import bgStyles from "../../styles/SignInUpForm.module.css"
 import Asset from "../../components/Asset";
 
 function PostCreateForm() {
@@ -81,12 +83,13 @@ function PostCreateForm() {
   );
 
   return (
+    <div className={bgStyles.background} style={{ backgroundImage: `url(${PostBackground})`}}>
     <Container>
         <Form>
             <Row>
                 <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
                     <Container
-                        className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
+                        className={`${styles.Container} d-flex flex-column justify-content-center`}
                     >
                         <Form.Group className="text-center">
                             {image ? (
@@ -131,6 +134,7 @@ function PostCreateForm() {
             </Row>
         </Form>
     </Container>
+    </div>
   );
 }
 
