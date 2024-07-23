@@ -4,6 +4,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import ProfilePic from "../../components/ProfilePic";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Post = (props) => {
     const {
@@ -21,10 +22,44 @@ const Post = (props) => {
       location,
       updated_on,
       postPage,
+      setPosts,
     } = props;
   
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+
+    const handleLove = async () => {
+        try {
+          const { data } = await axiosRes.post("/likes/", { post: id });
+          setPosts((prevPosts) => ({
+            ...prevPosts,
+            results: prevPosts.results.map((post) => {
+              return post.id === id
+                ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+                : post;
+            }),
+          }));
+        } catch (err) {
+          console.log(err);
+        }
+      };
+
+      const handleUnlove = async () => {
+        try {
+          await axiosRes.delete(`/likes/${like_id}/`);
+          setPosts((prevPosts) => ({
+            ...prevPosts,
+            results: prevPosts.results.map((post) => {
+              return post.id === id
+                ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+                : post;
+            }),
+          }));
+        } catch (err) {
+          console.log(err);
+        }
+      };
+
 
   return <Card className={styles.post}>
     <Card.Body>
@@ -57,11 +92,11 @@ const Post = (props) => {
               <i className="far fa-heart" />
             </OverlayTrigger>
           ) : like_id ? (
-            <span onClick={() => {}}>
+            <span onClick={handleUnlove}>
               <i className={`fas fa-heart ${styles.Heart}`} />
             </span>
           ) : currentUser ? (
-            <span onClick={() => {}}>
+            <span onClick={handleLove}>
               <i className={`far fa-heart ${styles.HeartOutline}`} />
             </span>
           ) : (
