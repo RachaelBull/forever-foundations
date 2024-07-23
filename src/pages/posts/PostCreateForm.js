@@ -10,7 +10,6 @@ import { Image } from "react-bootstrap";
 import PostBackground from "../../assets/post-bg.jpg"
 
 import Upload from "../../assets/upload-icon.png";
-
 import styles from "../../styles/Post.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import bgStyles from "../../styles/SignInUpForm.module.css"

@@ -24,3 +24,8 @@
     max-width: 100%;
     object-fit: contain;
 }
+
+.postcontainer {
+    margin-top: 71px;
+    min-height: 343px;
+}
