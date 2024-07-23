@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
+import Alert from "react-bootstrap/Alert";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import { Image } from "react-bootstrap";
@@ -83,6 +84,12 @@ function PostCreateForm() {
                 onChange={handleChange} 
             />
         </Form.Group>
+        {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+        ))}
+
         <Form.Group>
             <Form.Label>Post Content</Form.Label>
             <Form.Control 
@@ -93,6 +100,12 @@ function PostCreateForm() {
                 onChange={handleChange}
             />
         </Form.Group>
+        {errors?.content?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+        ))}
+
         <Form.Group>
             <Form.Label>What is the theme of your venue?</Form.Label>
             <Form.Control
@@ -105,6 +118,12 @@ function PostCreateForm() {
             <option>Rustic</option>
             <option>Traditional</option>
         </Form.Group>
+        {errors?.theme?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+        ))}
+        
         <Form.Group>
             <Form.Label>Where is your venue?</Form.Label>
             <Form.Control
@@ -118,18 +137,23 @@ function PostCreateForm() {
             <option>Greece</option>
             <option>Spain</option>
         </Form.Group>
+        {errors?.location?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+        ))}
 
 
     
     
       <Button
         className={`${btnStyles.postbtn} ${styles.pushed}`}
-        onClick={() => {}}
+        onClick={() => history.goBack()}
       >
-        cancel
+        Cancel
       </Button>
       <Button className={btnStyles.postbtn} type="submit">
-        create
+        Create
       </Button>
     </div>
   );
@@ -178,6 +202,12 @@ function PostCreateForm() {
                             ref={imageInput}
                         />
                         </Form.Group>
+                        {errors?.image?.map((message, idx) => (
+                        <Alert variant="warning" key={idx}>
+                        {message}
+                        </Alert>
+                        ))}
+
                         <div className="d-md-none">{textFields}</div>
                     </Container>
                 </Col>
