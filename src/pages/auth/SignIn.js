@@ -8,6 +8,7 @@ import signinbg from "../../assets/sign-up-pic.jpg"
 
 import { Button, Form, Col, Row, Container, Alert} from "react-bootstrap";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { setTokenTimestamp } from "../../utils/utils";
 
 
 function SignInForm() {
@@ -28,6 +29,7 @@ function SignInForm() {
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
+      setTokenTimestamp(data);
       history.push("/");
     } catch(err){
       setErrors(err.response?.data)

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -11,10 +11,11 @@ import PostBackground from "../../assets/post-bg.jpg"
 import Upload from "../../assets/upload-icon.png";
 
 import styles from "../../styles/Post.module.css";
-import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import bgStyles from "../../styles/SignInUpForm.module.css"
 import Asset from "../../components/Asset";
+import { useHistory } from "react-router";
+import { axiosReq } from "../../api/axiosDefaults";
 
 function PostCreateForm() {
 
@@ -24,9 +25,14 @@ function PostCreateForm() {
       title: "",
       content: "",
       image: "",
+      theme: "",
+      location: "",
     });
 
-    const { title, content, image } = postData;
+    const { title, content, image, theme, location } = postData;
+
+    const imageInput = useRef(null);
+    const history = useHistory();
 
     const handleChange = (event) => {
     setPostData({
@@ -45,28 +51,74 @@ function PostCreateForm() {
     }
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+
+    formData.append('title', title)
+    formData.append('content', content)
+    formData.append('image', imageInput.current.files[0])
+    formData.append('theme', theme)
+    formData.append('location', location)
+
+    try {
+        const { data } = await axiosReq.post("/posts/", formData);
+        history.push(`/posts/${data.id}`);
+      } catch (err) {
+        console.log(err);
+        if (err.response?.status !== 401) {
+          setErrors(err.response?.data);
+        }
+      }
+    };
 
   const textFields = (
     <div className="text-center">
-      <Form.Group>
-        <Form.Label>Title</Form.Label>
-        <Form.Control 
-            type="text" 
-            name="title"
-            value={title}
-            onChange={handleChange} 
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Post Content</Form.Label>
-        <Form.Control 
-            as="textarea" 
-            rows={6} 
-            name="content"
-            value={content}
-            onChange={handleChange}
-        />
-      </Form.Group>
+        <Form.Group>
+            <Form.Label>Title</Form.Label>
+            <Form.Control 
+                type="text" 
+                name="title"
+                value={title}
+                onChange={handleChange} 
+            />
+        </Form.Group>
+        <Form.Group>
+            <Form.Label>Post Content</Form.Label>
+            <Form.Control 
+                as="textarea" 
+                rows={6} 
+                name="content"
+                value={content}
+                onChange={handleChange}
+            />
+        </Form.Group>
+        <Form.Group>
+            <Form.Label>What is the theme of your venue?</Form.Label>
+            <Form.Control
+                as="select"
+                name="theme"
+                value={theme}
+                onChange={handleChange}
+            />
+            <option>Fairytale</option>
+            <option>Rustic</option>
+            <option>Traditional</option>
+        </Form.Group>
+        <Form.Group>
+            <Form.Label>Where is your venue?</Form.Label>
+            <Form.Control
+                as="select"
+                name="location"
+                value={location}
+                onChange={handleChange}
+            />
+            <option>England</option>
+            <option>Italy</option>
+            <option>Greece</option>
+            <option>Spain</option>
+        </Form.Group>
+
 
     
     
@@ -76,7 +128,7 @@ function PostCreateForm() {
       >
         cancel
       </Button>
-      <Button className={`${btnStyles.postbtn} ${btnStyles.Blue}`} type="submit">
+      <Button className={btnStyles.postbtn} type="submit">
         create
       </Button>
     </div>
@@ -85,7 +137,7 @@ function PostCreateForm() {
   return (
     <div className={bgStyles.background} style={{ backgroundImage: `url(${PostBackground})`}}>
     <Container>
-        <Form>
+        <Form onSubmit={handleSubmit}>
             <Row>
                 <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
                     <Container
@@ -123,6 +175,7 @@ function PostCreateForm() {
                             id="image-upload" 
                             accept="image/*"
                             onChange={handleChangeImage}
+                            ref={imageInput}
                         />
                         </Form.Group>
                         <div className="d-md-none">{textFields}</div>
