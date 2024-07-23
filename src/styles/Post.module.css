@@ -29,3 +29,11 @@
     margin-top: 71px;
     min-height: 343px;
 }
+
+.post {
+    background-color: #ffffff;
+    border: 1px solid #dadadf;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
