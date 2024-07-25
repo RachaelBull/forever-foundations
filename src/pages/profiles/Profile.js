@@ -26,21 +26,21 @@ const Profile = (props) => {
         <strong>{owner}</strong>
       </div>
       <div className={"text-right"}>
-        {!currentUser &&
+        {currentUser &&
           !is_owner &&
           (following_id ? (
             <Button
               className={btnStyles.SideUnfollowBtn}
               onClick={() => {}}
             >
-              UnFollow
+              unfollow
             </Button>
           ) : (
             <Button
               className={btnStyles.SideFollowBtn}
               onClick={() => {}}
             >
-              Follow
+              follow
             </Button>
           ))}
       </div>
