@@ -5,6 +5,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom";
 import ProfilePic from "../../components/ProfilePic";
 import { Button } from "react-bootstrap";
+import { useSetProfileData } from "../../contexts/ProfileDataContext";
 
 const Profile = (props) => {
   const { profile, imageSize = 55 } = props;
@@ -12,6 +13,8 @@ const Profile = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const { handleFollow } = useSetProfileData();
 
   return (
     <div
@@ -38,7 +41,7 @@ const Profile = (props) => {
           ) : (
             <Button
               className={btnStyles.SideFollowBtn}
-              onClick={() => {}}
+              onClick={() => handleFollow(profile)}
             >
               follow
             </Button>
