@@ -72,3 +72,14 @@
     background-color: aliceblue;
     color: #242a3d;
   }
+
+.CommentOwner {
+    font-weight: bold;
+    color: #2142b2;
+    margin-right: 8px;
+  }
+  
+.CommentDate {
+    font-weight: lighter;
+    color: #c1c1c5;
+  }
