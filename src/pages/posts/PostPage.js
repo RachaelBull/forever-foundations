@@ -10,6 +10,9 @@ import Comment from "../comments/Comment";
 import styles from "../../styles/Post.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
+import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
 import Post from "./Post";
 
 function PostPage() {
@@ -59,12 +62,22 @@ function PostPage() {
                   ) : comments.results.length ? (
                     "Comments"
                     ) : null}
-                    {comments.results.length ? (
-                      comments.results.map(comment => (
-                        <Comment key={comment.id} {...comment}
-                        setPost={setPost} setComments={setComments}/>
-                      ))
-                    ) : currentUser ? (
+                   {comments.results.length ? (
+                  <InfiniteScroll
+                   children={comments.results.map((comment) => (
+                  <Comment
+                  key={comment.id}
+                  {...comment}
+                  setPost={setPost}
+                  setComments={setComments}
+                />
+              ))}
+              dataLength={comments.results.length}
+              loader={<Asset spinner />}
+              hasMore={!!comments.next}
+              next={() => fetchMoreData(comments, setComments)}
+            />
+          ) : currentUser ? (
                     <span>No comments to display. Leave a comment below!</span>
                     ) : (
                     <span>No comments to display.</span>
