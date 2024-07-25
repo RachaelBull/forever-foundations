@@ -32,7 +32,7 @@ const NavBar = () => {
     )
     const loggedInLinksDisplay = <>
         <NavLink to="/feed" activeClassName={styles.Active}>
-            <i className="fas-fa-stream"></i> Feed
+            <i className="fas-fa-stream"></i> Following
         </NavLink>
         <NavLink to="/loved" activeClassName={styles.Active}>
             <i className="fas-fa-heart"></i> Loved

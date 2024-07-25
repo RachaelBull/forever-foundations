@@ -14,6 +14,7 @@ import { fetchMoreData } from "../../utils/utils";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import styles from "../../styles/Post.module.css";
+import PopularVenueOwners from "../profiles/PopularVenueOwners";
 
 function PostsPage({ message, filter = "" }) {
     const [posts, setPosts] = useState({ results: [] });
@@ -47,7 +48,6 @@ function PostsPage({ message, filter = "" }) {
     <Container>
         <Row className={`${styles.postcontainer} h-100 `}>
             <Col className="py-2 p-0 p-lg-2" lg={8}>
-            <p>Popular profiles mobile</p>
             <i className={`fas fa-search ${styles.searchicon}`} />
             <Form
                 className={styles.SearchBar}
@@ -87,7 +87,7 @@ function PostsPage({ message, filter = "" }) {
         )}
             </Col>
             <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-            <p>Popular profiles for desktop</p>
+            <PopularVenueOwners />
             </Col>
         </Row>
     </Container>

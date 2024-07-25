@@ -40,3 +40,43 @@
     margin-right: 5px;
     min-width: 85px;
   }
+
+.SideFollowBtn {
+  font-size: 0.8rem;
+  align-self: center;
+  border-radius: 100px;
+  border-color: transparent;
+  padding: 4px 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  min-width: 75px;
+  background-color: rgb(102, 53, 0, 0.5);
+}
+
+.SideFollowBtn:hover {
+  opacity: 0.8;
+  border-color: rgb(102, 53, 0, 0.5);
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: rgb(102, 53, 0);
+}
+
+.SideUnfollowBtn {
+  opacity: 0.8;
+  border-color: rgb(102, 53, 0, 0.5);
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: rgb(102, 53, 0);
+}
+
+.SideUnfollowBtn:hover {
+  font-size: 0.8rem;
+  align-self: center;
+  border-radius: 100px;
+  border-color: transparent;
+  padding: 4px 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  min-width: 75px;
+  background-color: rgb(102, 53, 0, 0.5);
+}
