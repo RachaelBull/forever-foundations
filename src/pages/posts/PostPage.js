@@ -14,6 +14,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import Post from "./Post";
+import PopularOwners from "../profiles/PopularVenueOwners";
 
 function PostPage() {
   const { id } = useParams();
@@ -84,7 +85,7 @@ function PostPage() {
                 </Container>
             </Col>
             <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-                Popular Venue Owners
+              <PopularOwners />
             </Col>
         </Row>
     </Container>
