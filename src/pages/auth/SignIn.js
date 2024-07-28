@@ -9,11 +9,13 @@ import signinbg from "../../assets/sign-up-pic.jpg"
 import { Button, Form, Col, Row, Container, Alert} from "react-bootstrap";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { setTokenTimestamp } from "../../utils/utils";
+import { useRedirect } from "../../hooks/useRedirect";
 
 
 function SignInForm() {
 
   const setCurrentUser = useSetCurrentUser();
+  useRedirect("loggedIn");
 
   const [signInData, setSignInData] = useState({
     username: "",
@@ -30,7 +32,7 @@ function SignInForm() {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
       setTokenTimestamp(data);
-      history.push("/");
+      history.goback();
     } catch(err){
       setErrors(err.response?.data)
   }
