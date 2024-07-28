@@ -10,6 +10,9 @@ import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
+import Username from "./pages/profiles/Username";
+import PasswordForm from "./pages/profiles/PasswordForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
               <Route exact path="/posts/:id" render={() => <PostPage />} />
               <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
               <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+              <Route exact path="/profiles/:id/edit/username" render={() => <Username />}/>
+              <Route exact path="/profiles/:id/edit/password" render={() => <PasswordForm />} />
+              <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
               <Route exact path="/gettingmarriedinitaly" render={() => <h1>Getting Married In Italy</h1>} />
               <Route exact path="/gettingmarriedintheuk" render={() => <h1>Getting Married In The UK</h1>} />
               <Route exact path="/gettingmarriedinspain" render={() => <h1>Getting Married In Spain</h1>} />
