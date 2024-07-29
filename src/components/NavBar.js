@@ -27,18 +27,18 @@ const NavBar = () => {
 
     const addListingIcon = (
         <NavLink to="/posts/create" activeClassName={styles.Active}>
-            <i className="fa-solid fa-user-plus"></i> Add Listing
+            <i class="fa-solid fa-image"></i> Add Listing
         </NavLink> 
     )
     const loggedInLinksDisplay = <>
         <NavLink to="/feed" activeClassName={styles.Active}>
-            <i className="fas-fa-stream"></i> Following
+        <i className="fa-solid fa-user-plus"></i> Following
         </NavLink>
         <NavLink to="/loved" activeClassName={styles.Active}>
-            <i className="fas-fa-heart"></i> Loved
+        <i class="fa-solid fa-heart"></i> Loved
         </NavLink>
         <NavLink to="/" onClick={handleSignOut}>
-            <i className="fas-fa-sign-out-alt"></i> Sign Out
+        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
         </NavLink>
         <NavLink to={`/profiles/${currentUser?.profile_id}`}>
             <ProfilePicture src={currentUser?.profile_image} text="Profile" height={40} />

@@ -3,13 +3,14 @@ import { Container } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import { useProfileData } from "../../contexts/ProfileDataContext";
 import Profile from "./Profile";
+import styles from "../../styles/Profile.module.css"
 
 const PopularVenueOwners = () => {
     const { popularOwners } = useProfileData();
 
   return (
     // WILL COME BACK TO THIS STATEMENT //
-<Container>
+<Container className={styles.ProfilesBox}>
       {popularOwners.results.length ? (
         <>
           <p>Popular Venue Owners</p>

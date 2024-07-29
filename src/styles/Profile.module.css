@@ -1,5 +1,6 @@
 .WordBreak {
     word-break: break-all;
+    position: relative;
   }
 
 .ProfileImage {
@@ -11,6 +12,19 @@
 
 .Row {
   margin-top: 73px;
+}
+
+.ProfilesBox {
+  border: 2px solid lightgrey;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.FollowerLine {
+  font-weight: lighter;
+  position: absolute;
+  margin-top: 20px;
+  padding-left: 65px;
 }
   
 @media screen and (max-width: 991px) {

@@ -28,6 +28,9 @@ const Profile = (props) => {
       <div className={`mx-2 ${styles.WordBreak}`}>
         <strong>{owner}</strong>
       </div>
+      <div className={styles.FollowerLine}>
+        {profile?.followers_count} followers
+      </div>
       <div className={"text-right"}>
         {currentUser &&
           !is_owner &&
