@@ -83,3 +83,15 @@
     font-weight: lighter;
     color: #c1c1c5;
   }
+
+.Heart {
+  color: rosybrown;
+}
+
+.Heart:hover {
+  color: rosybrown;
+}
+
+.NoResultsPic {
+  width: 20px;
+}
