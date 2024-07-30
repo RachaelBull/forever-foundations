@@ -110,14 +110,18 @@ function PostCreateForm() {
         <Form.Group>
             <Form.Label>What is the theme of your venue?</Form.Label>
             <Form.Control
+                required
                 as="select"
                 name="theme"
                 value={theme}
                 onChange={handleChange}
-            />
-            <option>Fairytale</option>
-            <option>Rustic</option>
-            <option>Traditional</option>
+            >
+              <option value='beach'>Beach</option>
+              <option value='barn'>Barn</option>
+              <option value='classic'>Classic</option>
+              <option value='rustic'>Rustic</option>
+              <option value='fairytale'>Fairytale</option>
+            </Form.Control>
         </Form.Group>
         {errors?.theme?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
@@ -128,15 +132,17 @@ function PostCreateForm() {
         <Form.Group>
             <Form.Label>Where is your venue?</Form.Label>
             <Form.Control
+                required
                 as="select"
                 name="location"
                 value={location}
                 onChange={handleChange}
-            />
-            <option>England</option>
-            <option>Italy</option>
-            <option>Greece</option>
-            <option>Spain</option>
+            >
+              <option value='greece'>Greece</option>
+              <option value='spain'>Spain</option>
+              <option value='italy'>Italy</option>
+              <option value='england'>England</option>
+            </Form.Control>
         </Form.Group>
         {errors?.location?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
