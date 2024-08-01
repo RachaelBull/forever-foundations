@@ -15,9 +15,8 @@
 }
 
 .ProfilesBox {
-  border: 2px solid lightgrey;
   background-color: white;
-  border-radius: 5%;
+  margin-top: 55px;
 }
 
 .FollowerLine {

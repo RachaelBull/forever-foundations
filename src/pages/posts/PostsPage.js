@@ -45,6 +45,7 @@ function PostsPage({ message, filter = "" }) {
       }, [filter, query, pathname]);
   
   return (
+    <div className={styles.greyed}>
     <Container>
         <Row className={`${styles.postcontainer} h-100 `}>
             <Col className="py-2 p-0 p-lg-2" lg={8}>
@@ -91,6 +92,7 @@ function PostsPage({ message, filter = "" }) {
             </Col>
         </Row>
     </Container>
+    </div>
   );
 }
 
