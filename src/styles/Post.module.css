@@ -31,7 +31,6 @@
 .post {
     background-color: #ffffff;
     margin-bottom: 16px;
-    text-align: center;
     border: transparent;
   }
 
@@ -95,4 +94,48 @@
 
 .greyed {
   background-color: whitesmoke;
+}
+
+.OptionNames {
+  font-family: Playwrite GB S, sans-serif;
+  font-weight: bold;
+  font-size: small;
+  color: #4d2600;
+  margin-left: 10px;
+}
+
+.PostTitle {
+  font-family: Arsenal SC, sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #4d2600;
+  padding-bottom: 20px;
+}
+
+.BreakLine {
+  width: 80%;
+}
+
+.PostContent {
+  font-family: Playfair Display, sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.Date {
+  font-family: Playwrite GB S, sans-serif;
+  color: #4d2600;
+  font-size: smaller;
+}
+
+.PostBar {
+  margin-left: 40%;
+}
+
+.UserName {
+  text-transform: uppercase;
+  color: #4d2600;
+  font-weight: bold;
+  letter-spacing: 1px;
 }

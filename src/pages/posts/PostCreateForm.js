@@ -116,11 +116,11 @@ function PostCreateForm() {
                 value={theme}
                 onChange={handleChange}
             >
-              <option value='beach'>Beach</option>
-              <option value='barn'>Barn</option>
-              <option value='classic'>Classic</option>
-              <option value='rustic'>Rustic</option>
-              <option value='fairytale'>Fairytale</option>
+              <option value='Beach'>Beach</option>
+              <option value='Barn'>Barn</option>
+              <option value='Classic'>Classic</option>
+              <option value='Rustic'>Rustic</option>
+              <option value='Fairytale'>Fairytale</option>
             </Form.Control>
         </Form.Group>
         {errors?.theme?.map((message, idx) => (

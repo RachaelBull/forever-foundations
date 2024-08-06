@@ -79,12 +79,12 @@ const Post = (props) => {
   return <Card className={styles.post}>
     <Card.Body>
         <Media className="align-items-center justify-content-between">
-            <Link to={`/profiles/${profile_id}`}>
+            <Link className={styles.UserName} to={`/profiles/${profile_id}`}>
             <ProfilePic src={profile_image} height={55} />
             {owner}
             </Link>
             <div className="d-flex align-items-center">
-            <span>{updated_on}</span>
+            <span className={styles.Date}>{updated_on}</span>
             {is_owner && postPage && <MoreDropdown handleEdit={handleEdit} handleDelete={handleDelete}/>}
           </div>
 
@@ -94,10 +94,11 @@ const Post = (props) => {
         <Card.Img src={image} alt={title} />
       </Link>
     <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {content && <Card.Text>{content}</Card.Text>}
-        <Card.Text>Venue Theme: {theme}</Card.Text>
-        <Card.Text>Venue Location: {location}</Card.Text>
+        {title && <Card.Title className={styles.PostTitle}>{title}</Card.Title>}
+        {content && <Card.Text className={styles.PostContent}>{content}</Card.Text>}
+        <hr className={styles.BreakLine}></hr>
+        <Card.Text className={styles.OptionNames}>Venue Theme: {theme}</Card.Text>
+        <Card.Text className={styles.OptionNames}>Venue Location: {location}</Card.Text>
         <div className={styles.PostBar}>
         {is_owner ? (
             <OverlayTrigger
