@@ -13,7 +13,8 @@ const PopularVenueOwners = () => {
 <Container className={styles.ProfilesBox}>
       {popularOwners.results.length ? (
         <>
-          <p>Popular Venue Owners</p>
+          <p className={styles.SideProfileTitle}>Profiles You May Like</p>
+          <hr></hr>
           {popularOwners.results.map((profile) => (
             <Profile key={profile.id} profile={profile} />
         ))}

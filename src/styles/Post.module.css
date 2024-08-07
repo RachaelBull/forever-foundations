@@ -42,7 +42,7 @@
   }
 
 .SearchBar input {
-    border-radius: 20px;
+  border: transparent;
     color: #4d2600;
     padding-left: 40px;
     margin-bottom: 16px;

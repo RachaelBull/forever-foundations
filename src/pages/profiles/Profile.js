@@ -20,7 +20,7 @@ const Profile = (props) => {
     <div
       className={"my-3 d-flex align-items-center"}
     >
-      <div>
+      <div className={styles.Padding}>
         <Link className="align-self-center" to={`/profiles/${id}`}>
           <ProfilePic src={image} height={imageSize} />
         </Link>
@@ -31,7 +31,7 @@ const Profile = (props) => {
       <div className={styles.FollowerLine}>
         {profile?.followers_count} followers
       </div>
-      <div className={"text-right"}>
+      <div className={btnStyles.AlignedProfileBtns}>
         {currentUser &&
           !is_owner &&
           (following_id ? (

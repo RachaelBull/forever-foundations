@@ -1,6 +1,9 @@
 .WordBreak {
     word-break: break-all;
     position: relative;
+    letter-spacing: 1px;
+    font-size: large;
+    color: #666463;
   }
 
 .ProfileImage {
@@ -20,10 +23,26 @@
 }
 
 .FollowerLine {
-  font-weight: lighter;
   position: absolute;
-  margin-top: 20px;
-  padding-left: 65px;
+  margin-top: 33px;
+  padding-left: 79px;
+  color: rgb(102, 53, 0, 0.6);
+  font-family: Playwrite GB S, sans-serif;
+  font-size: smaller;
+}
+
+.Padding {
+  padding-top: 15px;
+}
+
+.SideProfileTitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 10px;
+  font-family: Arsenal SC, sans-serif;
+  letter-spacing: 1px;
+  color: #666463;
 }
   
 @media screen and (max-width: 991px) {

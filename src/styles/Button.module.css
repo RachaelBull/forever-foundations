@@ -43,14 +43,12 @@
 
 .SideFollowBtn {
   font-size: 0.8rem;
-  align-self: center;
-  border-radius: 100px;
+  position: absolute;
+  right: 10%;
+  margin-bottom: 100px;
   border-color: transparent;
-  padding: 4px 10px;
-  margin-left: 2px;
   font-family: Merriweather, sans-serif;
-  margin-right: 2px;
-  min-width: 75px;
+  min-width: 84px;
   background-color: rgb(102, 53, 0, 0.5);
 }
 
@@ -63,12 +61,15 @@
 }
 
 .SideUnfollowBtn {
-  opacity: 0.8;
+  font-size: 0.8rem;
+  position: absolute;
+  right: 10%;
+  margin-bottom: 100px;
   border-color: rgb(102, 53, 0, 0.5);
-  cursor: pointer;
+  color: rgb(102, 53, 0, 0.5);
   font-family: Merriweather, sans-serif;
+  min-width: 75px;
   background-color: whitesmoke;
-  color: rgb(102, 53, 0);
 }
 
 .SideUnfollowBtn:hover {
@@ -81,4 +82,8 @@
   margin-right: 2px;
   min-width: 75px;
   background-color: rgb(102, 53, 0, 0.5);
+}
+
+.AlignedProfileBtns {
+  margin-bottom: 20px;
 }
