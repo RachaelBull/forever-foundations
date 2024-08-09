@@ -10,7 +10,6 @@ import styles from "../../styles/Profile.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import ReviewCreateForm from "../reviews/ReviewCreateForm.js";
-import PopularVenueOwners from "./PopularVenueOwners";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -21,23 +20,22 @@ import {
 import { Image, Button } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
-import Review from "../reviews/Review";
+import Review from "../reviews/Review"; //
 import NoResults from "../../assets/no-results.png";
 import { fetchMoreData } from "../../utils/utils";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
 
 function ProfilePage() {
-  const [setProfile] = useState({ results: [] });
-  const [reviews, setReviews] = useState({ results: [] });
+  const [profile, setProfile] = useState({ results: [] });//
+  const [reviews, setReviews] = useState({ results: [] }); //
   const [hasLoaded, setHasLoaded] = useState(false);
-  const currentUser = useCurrentUser();
+  const currentUser = useCurrentUser(); //
   const {id} = useParams();
   const {setProfileData, handleFollow, handleUnfollow} = useSetProfileData();
-  const { pageProfile } = useProfileData();
-  const [profile] = pageProfile.results;
   const is_owner = currentUser?.username === profile?.owner;
   const [profilePosts, setProfilePosts] = useState({ results: [] });
-  const profile_image = currentUser?.profile_image;
+  const { pageProfile } = useProfileData();
+  const profile_image = currentUser?.profile_image; 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -70,9 +68,10 @@ function ProfilePage() {
         setProfile({ results: [profile] });
         setReviews(reviews);
       } catch (err) {
-        // console.log(err);
+        console.log(err);
       }
     };
+
     handleMount();
   }, [id]);
 
@@ -170,14 +169,14 @@ function ProfilePage() {
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
       <Container className={styles.ProfilesBox}>
             <Col className="py-2 p-0 p-lg-2" lg={8}>
-                <Review {...reviews.results[0]} setReviews={setReviews} profilePage />
                 <Container>
-                  {currentUser ? (
+                {currentUser ? (
                   <ReviewCreateForm
                     profile_id={currentUser.profile_id}
                     profileImage={profile_image}
                     profile={id}
                     setProfile={setProfile}
+                    setReviews={setReviews}
                   />
                   ) : reviews.results.length ? (
                     "Reviews"
@@ -198,7 +197,7 @@ function ProfilePage() {
               next={() => fetchMoreData(reviews, setReviews)}
             />
           ) : currentUser ? (
-                    <span>No Reviews to display. Leave a review!</span>
+                    <span>No reviews to display. Leave a comment below!</span>
                     ) : (
                     <span>No reviews to display.</span>
                     )}

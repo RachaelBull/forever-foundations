@@ -1,43 +1,32 @@
-import React, { useState } from "react";
-
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { axiosRes } from "../../api/axiosDefaults";
-import { MoreDropdown } from "../../components/MoreDropdown";
+import React from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import ProfilePic from "../../components/ProfilePic";
-import Media from "react-bootstrap/Media";
-import { Link } from "react-router-dom";
+import { Media } from "react-bootstrap";
 
 const Review = (props) => {
-    const {
-      profile_id,
-      profile_image,
-      owner,
-      created_on,
-      title,
-      content,
-      id,
-      setProfile,
-      setReviews,
-    } = props;
+  const { profile_id, profile_image, owner, created_on, content } = props;
 
-    const currentUser = useCurrentUser();
-    const is_owner = currentUser?.username === owner;
-
-return (
-    <>
+  return (
+    <div>
+      <hr />
       <Media>
         <Link to={`/profiles/${profile_id}`}>
+          <ProfilePic src={profile_image} />
         </Link>
-        <Media.Body className="align-self-center ml-2">
-          <span>{owner}</span>
-          <span>{created_on}</span>
-            <>
-              <p><u>{title}</u></p>
-              <p>{content}</p>
-            </>
+        <Media.Body>
+          <span>
+            {owner}
+          </span>
+          <span>
+            {created_on}
+          </span>
+          <p>
+            {content}
+          </p>
         </Media.Body>
-    </Media>
-    </>
-  )};
+      </Media>
+    </div>
+  )
+}
 
 export default Review;

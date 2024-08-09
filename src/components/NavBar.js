@@ -52,39 +52,6 @@ const NavBar = () => {
                     <NavLink to="/signup" activeClassName={styles.Active}>
                         <i className="fa-solid fa-user-plus"></i> Sign Up
                     </NavLink>
-                    <NavDropdown title="Information" id="basic-nav-dropdown">
-                        <NavDropdown.Item>
-                            <NavLink to="/gettingmarriedinitaly">
-                                Getting Married In Italy
-                            </NavLink>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item>
-                            <NavLink to="/gettingmarriedintheuk">
-                                Getting Married In The UK
-                            </NavLink>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item>
-                            <NavLink to="/gettingmarriedinspain">
-                                Getting Married In Spain
-                            </NavLink>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item>
-                            <NavLink to="/gettingmarriedingreece">
-                                Getting Married In Greece
-                            </NavLink>
-                        </NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item>
-                            <NavLink to="/choosingyourlocation">
-                                Choosing Your Location
-                            </NavLink>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item>
-                            <NavLink to="/budgetfriendlytips">
-                                Budget Friendly Tips
-                            </NavLink>
-                        </NavDropdown.Item>
-                    </NavDropdown>
         </>
     );
 
