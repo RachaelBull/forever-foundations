@@ -93,9 +93,6 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
-            <Form.Group controlId="formBasicCheckbox">
-                <Form.Check className={styles.input} type="checkbox" label="Create an account for a business" />
-            </Form.Group>
             <Button type="submit" className={btnStyles.signupbtn}>
             Sign Up
             </Button>
