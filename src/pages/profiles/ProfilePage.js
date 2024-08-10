@@ -189,7 +189,7 @@ function ProfilePage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-      <Container className={styles.ProfilesBox}>
+      <Container>
             <Col className="py-2 p-0 p-lg-2" lg={8}>
             </Col>
             <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">

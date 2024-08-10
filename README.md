@@ -137,7 +137,7 @@ Title                        | User Story                                       
 These are the colours that I had chosen to base the design of my project around. These were decided from the type of categories I plan to include into my project, such as the words rustic, barn and classic. I felt like the brown and grey colours fit those descriptions perfectly. The Roseybrown colour was used as the 
 colour background fill for the love icons. At first when they were implimented the colour of these were quite bright red. After looking further into it I decided that the original colour was too hard in comparison to the softer coloured design of the website as a whole.
 
-![Forever Foundations colour palette](docs/design/color-pallette.png)
+![Forever Foundations colour palette](docs/features/design/color-pallette.png)
 
 # Chosen Fonts
 
@@ -147,7 +147,7 @@ the popular users section to the side of the page of posts. I felt like this add
 Whilst my aim was to still look professional and elegant, I opted for the other three more bold fonts to be implemented through the rest of the project. The boldness of some of these fonts with added font weight and letter spacing applied through styling made it stand out and look eyecatching to a user. Throughout the rest of the 
 project these particular fonts are also played down in areas where they are not needed to appear so big and bold, giving the webpages that more softer, but still consistant look to the page.
 
-![Forever Foundations chosen fonts](docs/design/fonts.png)
+![Forever Foundations chosen fonts](docs/features/design/fonts.png)
 
 # WIREFRAMES HERE
 
@@ -164,10 +164,72 @@ are propted to do so once hovering over the icons.
 
 ![The landing page from a mobile](docs/features/landing-page-mobile.png)
 
-## Sign Up
+## Sign Up Page
 
 The sign up page consists of a widly spread attractive background picture with a form placed ontop of it with a dark faded background. Once the user has successfully created an account they will then be redirected to the sign in form.
 
 ![The Sign Up page from a desktop](docs/features/sign-up-page-pc.png)
 
 ![The Sign Up page from a mobile](docs/features/sign-up-page-mobile.png)
+
+## Sign In Page
+
+After the user has successfuly made an account with the website, or already has an account, then they can proceed to log in through this form which is also placed ontop of a widely spread background image.
+
+![The Sign In page from a desktop](docs/features/sign-in-page-pc.png)
+
+![The Sign In page from a mobile](docs/features/sign-up-page-mobile.png)
+
+## The Home page after sign in
+
+The user is redirected and taken to this page after they have successfully signed in. This is very similar to the landing page without logging in however some of the extra given functionality is already visible. For example, the follow buttons to the side of the popular profiles.
+
+![The home page after sign in from a desktop](docs/features/home-page-sign-in-pc.png)
+
+![The home page after sign in from a mobile](docs/features/home-page-sign-in-mobile.png)
+
+## Creating a post
+
+Located at the top of the page on the navigation bar the user will find a button 'Add Listing' which takes the user to a page that allows them to create their own posts. Before the post is submitted and posted successfully the user would have had to of met all of the requirements such as the correct image size and a required title for the post. Once the post is 
+submitted and created the user will then be redirected to the post that they have just created but the posted version. From this point the user is then able to edit or delete their post.
+
+![Create a post page from a desktop](docs/features/create-post-pc.png)
+
+![Create a post page from a mobile](docs/features/create-post-mobile.png)
+
+## Editing a post
+
+When a post is clicked or a post has just been created the user will be directed to the post detail page which will display their singular post. Here they have the option to edit their post by navigating to the three dots located at the top right hand side of the post and selecting the edit post option. The user can only peform these actions if they own the post. 
+Once the post is uodated to their liking on the edit page, the user should then click the 'save changes' button and they will then again be redirected to their post detail page to view the updated version.
+
+![Edit a post page from a desktop](docs/features/edit-post-pc.png)
+
+![Edit a post page from a mobile](docs/features/edit-post-mobile.png)
+
+## Deleting a post
+
+When the user is on the post detail page of a post that they own they also have the option to delete the post by clicking on the bin emoji. By clicking on this their post will delete from the site and their profile.
+
+![Delete a post page from a desktop](docs/features/delete-post-pc.png)
+
+![Delete a post page from a mobile](docs/features/delete-post-mobile.png)
+
+## Profile Page
+
+Once a user signs up to the website and creates an account a profile is automatically created for them. But this only includes the followers count, posts count, following count, a default profile picture and their list of posts and username. The user can then, once logged in, go ahead and add to their profile. Features the user will be able to add is a 
+bio about themselves in the 'About You' section of the edit form, the user can also supply their contact email, and the user can also change their profile image.
+
+![Profile page from a desktop](docs/features/profile-pc.png)
+
+![Profile page from a mobile](docs/features/profile-mobile.png)
+
+## Edit Profile Page
+
+Here is where the user is now able to edit and update their profile:
+
+![Edit profile page from a desktop](docs/features/edit-profile-pc.png)
+
+![Edit profile page from a mobile](docs/features/edit-profile-mobile.png)
+
+## Comments
+
