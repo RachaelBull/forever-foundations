@@ -8,20 +8,7 @@ You can visit the website here: [Forever Foundations]([https://forever-foundatio
 
 *********Responsive img here*************
 
-# **Table of Contents**
-
-* [**Planning of the project**](#planning)
-  * [**The Strategy Plane**](#the-strategy-plane)
-    * [**Target Audience**](#target-audience)
-    *  [**Project Goals**](#project-goals)
-  * [**The Structure Plane**](#the-structure-plane)
-    * [**EPIC: Navigation**](#epic-navigation)
-    * [**EPIC: Profile**](#epic-profile)
-    * [**EPIC: Home**](#epic-home)
-    * [**EPIC: Comments**](#epic-comments)
-    * [**EPIC: Posts**](#epic-posts)
-    * [**EPIC: Loves**](#epic-loves)
-    * [**EPIC: Authentication**](#epic-authentication)
+<hr>
 
  ## Planning
 
@@ -43,6 +30,20 @@ The target audience for this particular project isn't only very exact but it's a
 - Family and friends that are looking to help their loved ones find a venue
 - People of any age and any gender
 
+### First Time Visitor Goals:
+
+- Visit the site and know the purpose immedietaly and navigate easily.
+- View a page of posts without having to create an account.
+- Be able to create an account quickly and easily.
+- Be able to easily add my own pictures and posts.
+- Have the ability to search for posts and profiles using keywords.
+
+### Returning Visitor Goals:
+
+- Easily locate back to posts I've liked to revisit or reply to any comments that have been made.
+- Be able to follow new popular users profiles without having to navigate to their profiles.
+- Add more of my own posts or comments.
+
 ## Project Goals
 
 - Build a platform for a wide range of people
@@ -55,6 +56,11 @@ The target audience for this particular project isn't only very exact but it's a
 - Enable users to view content they took a liking to at a later date
 
 ## The Structure Plane
+
+# The Agile Method
+
+Before too much planning had gone into detail for this project I first started by creating a project board of user stories for this project. I found this much easier to work on each issue based on their priority rather than trying to get everything completed at the same time. 
+Both the API and the Frontend stories are all here presented on one board to make things easier to locate and work on. [Here is the project user story board.](https://github.com/users/RachaelBull/projects/5)
 
 Here I will explain the use and goals of my user stories and developer stories that have been split up into Epics:
 
@@ -125,3 +131,43 @@ Title                        | User Story                                       
  Logged In View              | As a *User* I can log in to my account and see the nav layout change so that I can have visual confirmation of my log in.                                   | **MUST HAVE**    |
  Sign Out                    | As a *User* I can sign out of my account so that I can keep my account safe whilst away from it.                                                            | **MUST HAVE**    |
  Sign In                     | As a *Site User*, I can easily sign in so that I can access all functionality for logged in users.                                                          | **MUST HAVE**    |
+
+ # Design
+
+These are the colours that I had chosen to base the design of my project around. These were decided from the type of categories I plan to include into my project, such as the words rustic, barn and classic. I felt like the brown and grey colours fit those descriptions perfectly. The Roseybrown colour was used as the 
+colour background fill for the love icons. At first when they were implimented the colour of these were quite bright red. After looking further into it I decided that the original colour was too hard in comparison to the softer coloured design of the website as a whole.
+
+![Forever Foundations colour palette](docs/design/color-pallette.png)
+
+# Chosen Fonts
+
+A larger range of fonts were used for this project as I wanted to keep it interesting and looking nicely designed. I used the more italic style font for things such as the catergory filters when viewing a post or a list of posts. I also used this one for the followers count which is displayed at the side of 
+the popular users section to the side of the page of posts. I felt like this added a more personal and homely touch to the project as it was more on the playful, less bold and elegent side. 
+
+Whilst my aim was to still look professional and elegant, I opted for the other three more bold fonts to be implemented through the rest of the project. The boldness of some of these fonts with added font weight and letter spacing applied through styling made it stand out and look eyecatching to a user. Throughout the rest of the 
+project these particular fonts are also played down in areas where they are not needed to appear so big and bold, giving the webpages that more softer, but still consistant look to the page.
+
+![Forever Foundations chosen fonts](docs/design/fonts.png)
+
+# WIREFRAMES HERE
+
+<hr>
+
+# Features
+
+## The Home Page/Landing Page
+
+As soon as entering into the website the user is taken straight to the landing/home page which consists of the most recently made posts and a list of popular profiles which are unable to be followed unless the user is logged in. They are also able to see the loves and comments icon, however they cannot use these feautures until they are logged in, which they 
+are propted to do so once hovering over the icons.
+
+![The landing page from a desktop](docs/features/landing-page-pc.png)
+
+![The landing page from a mobile](docs/features/landing-page-mobile.png)
+
+## Sign Up
+
+The sign up page consists of a widly spread attractive background picture with a form placed ontop of it with a dark faded background. Once the user has successfully created an account they will then be redirected to the sign in form.
+
+![The Sign Up page from a desktop](docs/features/sign-up-page-pc.png)
+
+![The Sign Up page from a mobile](docs/features/sign-up-page-mobile.png)

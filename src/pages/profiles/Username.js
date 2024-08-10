@@ -15,6 +15,7 @@ import {
 } from "../../contexts/CurrentUserContext";
 
 import btnStyles from "../../styles/Button.module.css";
+import styles from "../../styles/ProfileEdit.module.css"
 
 const Username = () => {
   const [username, setUsername] = useState("");
@@ -52,6 +53,7 @@ const Username = () => {
   };
 
   return (
+    <Container className={styles.Container}>
     <Row>
       <Col className="py-2 mx-auto text-center" md={6}>
         <Container>
@@ -86,6 +88,7 @@ const Username = () => {
         </Container>
       </Col>
     </Row>
+    </Container>
   );
 };
 

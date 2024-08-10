@@ -26,15 +26,17 @@ import { fetchMoreData } from "../../utils/utils";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
 
 function ProfilePage() {
-  const [profile, setProfile] = useState({ results: [] });//
+  //const [ profile, setProfile ] = useState({ results: [] });
   const [reviews, setReviews] = useState({ results: [] }); //
+  const { pageProfile } = useProfileData();
   const [hasLoaded, setHasLoaded] = useState(false);
+  const [profile] = pageProfile.results;
   const currentUser = useCurrentUser(); //
   const {id} = useParams();
   const {setProfileData, handleFollow, handleUnfollow} = useSetProfileData();
   const is_owner = currentUser?.username === profile?.owner;
   const [profilePosts, setProfilePosts] = useState({ results: [] });
-  const { pageProfile } = useProfileData();
+ 
   const profile_image = currentUser?.profile_image; 
 
   useEffect(() => {
@@ -58,22 +60,22 @@ function ProfilePage() {
     fetchData();
   }, [id, setProfileData]);
 
-  useEffect(() => {
-    const handleMount = async () => {
-      try {
-        const [{ data: profile }, { data: reviews }] = await Promise.all([
-          axiosReq.get(`/profiles/${id}`),
-          axiosReq.get(`/reviews/?profile=${id}`),
-        ]);
-        setProfile({ results: [profile] });
-        setReviews(reviews);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+  //useEffect(() => {
+  //  const handleMount = async () => {
+  //   try {
+  //      const [{ data: profile }, { data: reviews }] = await Promise.all([
+  //        axiosReq.get(`/profiles/${id}`),
+  //        axiosReq.get(`/reviews/?profile=${id}`),
+  //      ]);
+  //      setProfile({ results: [profile] });
+  //      setReviews(reviews);
+  //    } catch (err) {
+  //      console.log(err);
+  //    }
+  //  };
 
-    handleMount();
-  }, [id]);
+  //  handleMount();
+  //}, [id]);
 
   const mainProfile = (
     <>
@@ -102,6 +104,19 @@ function ProfilePage() {
               <div>following</div>
             </Col>
           </Row>
+          {profile?.bio && (
+                        <Row className="px-3 justify-content-center">
+                            <Col className="text-center">
+                                <h4 className={styles.BioHeader}>
+                                    A LITTLE ABOUT MYSELF...
+                                </h4>
+                                <hr />
+                                <div className={styles.bio}>
+                                    {profile?.bio}
+                                </div>
+                            </Col>
+                        </Row>
+                    )}
         </Col>
         <Col lg={3} className="text-lg-right">
           {currentUser &&
@@ -122,7 +137,6 @@ function ProfilePage() {
               </Button>
             ))}
         </Col>
-        {profile?.content && <Col className="p-3">{profile.content}</Col>}
       </Row>
     </>
   );
@@ -130,8 +144,7 @@ function ProfilePage() {
   const mainProfilePosts = (
     <>
       <hr />
-      <p className="text-center">{profile?.owner}'s posts</p>
-      <hr />
+      <p className={styles.PostHeader}>{profile?.owner}'s posts</p>
       {profilePosts.results.length ? (
         <InfiniteScroll
           children={profilePosts.results.map((post) => (
@@ -169,39 +182,6 @@ function ProfilePage() {
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
       <Container className={styles.ProfilesBox}>
             <Col className="py-2 p-0 p-lg-2" lg={8}>
-                <Container>
-                {currentUser ? (
-                  <ReviewCreateForm
-                    profile_id={currentUser.profile_id}
-                    profileImage={profile_image}
-                    profile={id}
-                    setProfile={setProfile}
-                    setReviews={setReviews}
-                  />
-                  ) : reviews.results.length ? (
-                    "Reviews"
-                    ) : null}
-                   {reviews.results.length ? (
-                  <InfiniteScroll
-                   children={reviews.results.map((review) => (
-                  <Review
-                  key={review.id}
-                  {...review}
-                  setProfile={setProfile}
-                  setReviews={setReviews}
-                />
-              ))}
-              dataLength={reviews.results.length}
-              loader={<Asset spinner />}
-              hasMore={!!reviews.next}
-              next={() => fetchMoreData(reviews, setReviews)}
-            />
-          ) : currentUser ? (
-                    <span>No reviews to display. Leave a comment below!</span>
-                    ) : (
-                    <span>No reviews to display.</span>
-                    )}
-                </Container>
             </Col>
             <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
             </Col>

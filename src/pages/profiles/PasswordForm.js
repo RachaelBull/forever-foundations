@@ -12,6 +12,9 @@ import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import btnStyles from "../../styles/Button.module.css";
+import styles from "../../styles/ProfileEdit.module.css"
+
+
 const PasswordForm = () => {
   const history = useHistory();
   const { id } = useParams();
@@ -51,6 +54,7 @@ const PasswordForm = () => {
   };
 
   return (
+    <Container className={styles.Container}>
     <Row>
       <Col className="py-2 mx-auto text-center" md={6}>
         <Container>
@@ -101,6 +105,7 @@ const PasswordForm = () => {
         </Container>
       </Col>
     </Row>
+    </Container>
   );
 };
 

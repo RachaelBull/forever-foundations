@@ -44,6 +44,27 @@
   letter-spacing: 1px;
   color: #666463;
 }
+
+.PostHeader {
+  text-align: center;
+  background-color: white;
+  letter-spacing: 3px;
+  height: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 5px 10px rgb(	188, 143, 143, 0.4);
+}
+
+.BioHeader {
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: medium;
+  padding-top: 20px;
+}
+
+.bio {
+  font-family: Playwrite GB S, sans-serif;
+}
   
 @media screen and (max-width: 991px) {
     .ProfileImage {
