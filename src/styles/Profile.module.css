@@ -65,10 +65,23 @@
 .bio {
   font-family: Playwrite GB S, sans-serif;
 }
-  
+
+.Email {
+  margin-top: 15px;
+  letter-spacing: 1px;
+  color: #666463;
+  border: 1px solid rgb(	188, 143, 143, 0.4);
+  border-radius: 5%;
+  background-color: white;
+}
+
 @media screen and (max-width: 991px) {
     .ProfileImage {
       width: 250px;
       height: 250px;
+    }
+
+    .pushed {
+      margin-top: 110px;
     }
   }

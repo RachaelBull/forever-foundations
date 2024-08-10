@@ -28,9 +28,10 @@ const ProfileEditForm = () => {
   const [profileData, setProfileData] = useState({
     name: "",
     bio: "",
+    email: "",
     image: "",
   });
-  const { name, bio, image } = profileData;
+  const { name, bio, email, image } = profileData;
 
   const [errors, setErrors] = useState({});
 
@@ -39,8 +40,8 @@ const ProfileEditForm = () => {
       if (currentUser?.profile_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/profiles/${id}/`);
-          const { name, bio, image } = data;
-          setProfileData({ name, bio, image });
+          const { name, bio, email, image } = data;
+          setProfileData({ name, bio, email, image });
         } catch (err) {
           console.log(err);
           history.push("/");
@@ -65,6 +66,7 @@ const ProfileEditForm = () => {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("bio", bio);
+    formData.append("email", email);
 
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
@@ -101,6 +103,24 @@ const ProfileEditForm = () => {
           {message}
         </Alert>
       ))}
+
+      <Form.Group>
+        <Form.Label>Contact Email</Form.Label>
+        <Form.Control
+          as="textarea"
+          value={email}
+          onChange={handleChange}
+          name="email"
+          rows={1}
+        />
+      </Form.Group>
+
+      {errors?.email?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+      
       <Button
         className={btnStyles.postbtn}
         onClick={() => history.goBack()}

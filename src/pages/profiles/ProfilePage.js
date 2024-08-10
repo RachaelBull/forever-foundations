@@ -105,18 +105,27 @@ function ProfilePage() {
             </Col>
           </Row>
           {profile?.bio && (
-                        <Row className="px-3 justify-content-center">
-                            <Col className="text-center">
-                                <h4 className={styles.BioHeader}>
-                                    A LITTLE ABOUT MYSELF...
-                                </h4>
-                                <hr />
-                                <div className={styles.bio}>
-                                    {profile?.bio}
-                                </div>
-                            </Col>
-                        </Row>
-                    )}
+            <Row className="px-3 justify-content-center">
+              <Col className="text-center">
+                <h4 className={styles.BioHeader}>
+                A LITTLE ABOUT MYSELF...
+                </h4>
+                <hr />
+                <div className={styles.bio}>
+                  {profile?.bio}
+                </div>
+              </Col>
+            </Row>
+            )}
+            {profile?.email && (
+            <Row className="px-3">
+              <Col>
+                <p className={styles.Email}>Contact Email: {profile?.email}</p>
+              </Col>
+
+            </Row>
+            )}
+
         </Col>
         <Col lg={3} className="text-lg-right">
           {currentUser &&
@@ -165,7 +174,7 @@ function ProfilePage() {
   );
 
   return (
-    <Container>
+    <Container className={styles.pushed}>
     <Row className={styles.Row}>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <Container>
