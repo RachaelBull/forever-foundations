@@ -13,6 +13,7 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import Username from "./pages/profiles/Username";
 import PasswordForm from "./pages/profiles/PasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import PageNotFound from "./components/PageNotFound";
 
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
               <Route exact path="/gettingmarriedingreece" render={() => <h1>Getting Married In Greece</h1>} />
               <Route exact path="/choosingyourlocation" render={() => <h1>Choosing Your Location</h1>} />
               <Route exact path="/budgetfriendlytips" render={() => <h1>Budget Friendly Tips</h1>} />
-              <Route render={() => <p>The Page You Are Looking For Has Not Been Found.</p>} />
+              <Route exact render={() => <PageNotFound />}/>
             </Switch>
         </div>
   );

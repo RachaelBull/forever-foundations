@@ -1,0 +1,38 @@
+.NotFoundBox {
+    margin-top: 200px;
+}
+
+.Image {
+    margin-top: 200px;
+    border-radius: 50%;
+    height: 25%;
+    width: 25%;
+    box-shadow: 4px 5px rgb(188,143,143,0.2);
+}
+
+.SubTitle {
+    margin-top: 150px;
+    font-family: Playwrite GB S, sans-serif;
+}
+
+.Title {
+    padding-top: 80px;
+    background-color: transparent;
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.Hr {
+    width: 30%;
+}
+@media screen and (max-width: 991px) {
+    .Title {
+        padding-top: 110px;
+    }
+
+    .Image {
+        height: 80%;
+        width: 80%;
+    }
+}
