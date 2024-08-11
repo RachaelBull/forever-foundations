@@ -1,7 +1,6 @@
 import React from "react";
 import Hearts from "../assets/heartsbg.jpg";
 import styles from "../styles/PageNotFound.module.css";
-import Asset from "./Asset";
 
 
 const PageNotFound = () => {
@@ -19,7 +18,7 @@ const PageNotFound = () => {
             </h4>
         </div>
         <div>
-            <img src={Hearts} className={styles.Image}></img>
+            <img src={Hearts} alt="Two hearts" className={styles.Image}></img>
       </div>
     </div>
   );

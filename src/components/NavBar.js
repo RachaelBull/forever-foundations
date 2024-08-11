@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -27,7 +27,7 @@ const NavBar = () => {
 
     const addListingIcon = (
         <NavLink to="/posts/create" activeClassName={styles.Active}>
-            <i class="fa-solid fa-image"></i> Add Listing
+            <i className="fa-solid fa-image"></i> Add Listing
         </NavLink> 
     )
     const loggedInLinksDisplay = <>
@@ -35,10 +35,10 @@ const NavBar = () => {
         <i className="fa-solid fa-user-plus"></i> Following
         </NavLink>
         <NavLink to="/loved" activeClassName={styles.Active}>
-        <i class="fa-solid fa-heart"></i> Loved
+        <i className="fa-solid fa-heart"></i> Loved
         </NavLink>
         <NavLink to="/" onClick={handleSignOut}>
-        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+        <i className="fa-solid fa-right-from-bracket"></i> Sign Out
         </NavLink>
         <NavLink to={`/profiles/${currentUser?.profile_id}`}>
             <ProfilePicture src={currentUser?.profile_image} text="Profile" height={40} />
