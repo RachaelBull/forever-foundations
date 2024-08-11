@@ -8,7 +8,7 @@ import { MoreDropdown } from "../../components/MoreDropdown";
 import { axiosRes } from "../../api/axiosDefaults";
 
 const Review = (props) => {
-  const { profile_id, profile_image, owner, created_on, content, setReviews, id, setProfile } = props;
+  const { profile_id, profile_image, owner, review, created_on, content, setReviews, id, setProfile } = props;
 
   const [showEditForm, setShowEditForm] = useState(false);
 
