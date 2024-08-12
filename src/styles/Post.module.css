@@ -141,3 +141,9 @@
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+@media screen and (max-width: 991px) {
+  .greyed {
+    padding-top: 40px;
+  }
+}

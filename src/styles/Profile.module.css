@@ -84,4 +84,19 @@
     .pushed {
       margin-top: 110px;
     }
+
+    .Followbtn {
+      margin-bottom: 10%;
+      margin-right: 38%;
+      margin-top: 10px;
+   }
   }
+
+@media screen and (max-width: 430px) {
+  .Followbtn {
+    margin-bottom: 10%;
+    margin-right: 28%;
+    margin-top: 10px;
+    
+  }
+}

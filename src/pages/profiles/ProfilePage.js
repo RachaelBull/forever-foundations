@@ -130,7 +130,7 @@ function ProfilePage() {
             )}
 
         </Col>
-        <Col lg={3} className="text-lg-right">
+        <Col lg={3} className={`${styles.Followbtn} text-lg-right`}>
         {currentUser &&
             !is_owner &&
             (profile?.following_id ? (

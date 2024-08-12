@@ -4,7 +4,7 @@
 
 Forever Foundations is a social media based platform designed to help users find their dream wedding venues. This website includes interaction such as posting, loving content, commenting on content and following accounts. However, your type of account will determine how much restrication you get across the website. This is to keep content relevant to the websites purpose.
 
-You can visit the website here: [Forever Foundations]([https://forever-foundations-e27644123eb0.herokuapp.com/])
+You can visit the website here: [Forever Foundations](https://forever-foundations-e27644123eb0.herokuapp.com/)
 
 ![Forever Foundations](docs/wireframes/responsive.png)
 
