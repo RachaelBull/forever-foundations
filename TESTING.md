@@ -69,3 +69,4 @@ For this project I carried out extensive manual testing to ensure that everythin
 # Validations
 
 - All CSS was put through [W3C CSS](https://jigsaw.w3.org/css-validator/#validate_by_input) and came back with no errors.
+- All HTML was ran through a HTML Validator and saw '%' errors with the favicon uploads, however these are part of the import name and therefore is needed.

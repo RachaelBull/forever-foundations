@@ -6,7 +6,7 @@ Forever Foundations is a social media based platform designed to help users find
 
 You can visit the website here: [Forever Foundations](https://forever-foundations-e27644123eb0.herokuapp.com/)
 
-![Forever Foundations](docs/wireframes/responsive.png)
+![Forever Foundations](docs/features/wireframes/responsive.png)
 
 <hr>
 
@@ -258,6 +258,73 @@ Here is where the user is now able to edit and update their profile:
 ![Edit profile page from a mobile](docs/features/edit-profile-mobile.png)
 
 ## Comments
+
+Here users are able to read comments that are attached to a post at any time regardless whether or not they are logged in. However, users are only able to leave comments when they are logged in and that is only when the comment form will become availble to them. Each post also consists of a comment count.
+Each time a new comment is left on a post the number count next to the speech icon will increase and also decrease whenever a comment has been deleted. Users are also also to edit their comments here too.
+
+![Comments from a desktop](docs/features/comments-pc.png)
+
+![Comments from a mobile](docs/features/comments-mobile.png)
+
+![Deleting or Editing comments from a desktop](docs/features/comments-editdelete-pc.png)
+
+![Deleting or Editing comments from a mobile](docs/features/comments-editdelete-mobile.png)
+
+## Loves
+
+Users are able to express their passion and interest for a post by loving it. To do this the user will click on the hearts icon located just underneath the post. By doing this the colour of the icon will fill to a pink colour and the number count next to the heart icon will increase. And if a user then 
+clicks on the icon again to unlove the post then the count will be decreased. The post that the user loved will also then appear in their loved feed page.
+
+![Loves from a desktop](docs/features/loves-pc.png)
+
+![Loves from a desktop](docs/features/loves-mobile.png)
+
+## Follows 
+
+Users can follow and unfollow other users by clicking on the button next to their profile on the home page, or by navigating to their profile page and selecting follow from there. Another click of the button will unfollow them.
+
+![Follows from a desktop](docs/features/follows-pc.png)
+
+![Follows from a mobile](docs/features/follows-mobile.png)
+
+## Reviews
+
+Users are able to leave reviews on eachother profile. They are also able to edit and delete these in the same way that the comments are able to be editted and deleted. This is only availble in desktop view.
+
+![Reviews from a desktop](docs/features/reviews.png)
+
+![Reviews edit and delete from a desktop](docs/features/reviews-editdelete.png)
+
+## Search bar and no results search
+
+Users are able to filter through the content on their feed by typing in keywords into the search bar. If nothing is found a results message will be displayed to the user.
+
+![Search Bar](docs/features/search-bar.png)
+
+![Search Bar no results](docs/features/search-bar-no-results.png)
+
+## Page not found
+
+If the URL that the user is trying to enter cannot be found or some content is no longer there then a 404 error page will display to the user.
+
+![404 desktop](docs/features/404-pc.png)
+
+![404 mobile](docs/features/404-mobile.png)
+
+# Reusable Components
+
+- The 404 Page Not Found is a reusable react component and is able to be displayed multiple times across the website depending on the URL input and requests of the user.
+- The Moredropdown component is also used to edit and delete things such as comments, post, reviews and profile.
+- The Navbar is also reused across every web page in this project.
+
+# Future Features
+
+As time was tight for me with this project as I took a great deal of time to really try and break down the code and understand what I was doing rather than just putting in any code I was half unsure of, I wasn't able to add everything that I had originally planned or wanted to. In the future I will:
+
+* Add a reviews form and section in mobile view aswell as in desktop.
+* I will add a different account type for venue owners and regular users looking for a venue or just having a browse. Some of the files such as PopularOwners will have names that don't currently match the submitted project. This is because at the time of creating these files I was intending to add these features
+however they proved a bit too complex for the time I had to get this done. As a result of this, the file names have stayed as they are so that I am easily able to pick back up where I left off in the future.
+* I will change it so that only venue owner accounts can post and only regular users are able to leave reviews.
 
 # Technologies, Libraries and Frameworks Used
 
