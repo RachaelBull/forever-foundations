@@ -3,17 +3,13 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import ProfilePic from "../../components/ProfilePic";
 import { Media } from "react-bootstrap";
 import ReviewEditForm from './ReviewEditForm';
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { axiosRes } from "../../api/axiosDefaults";
 
 const Review = (props) => {
-  const { profile_id, profile_image, owner, review, created_on, content, setReviews, id, setProfile } = props;
+  const { profile_id, profile_image, owner, is_owner, created_on, content, setReviews, id, setProfile } = props;
 
   const [showEditForm, setShowEditForm] = useState(false);
-
-  const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === owner;
 
   const handleDelete = async () => {
     try {
@@ -63,7 +59,7 @@ const Review = (props) => {
             <></>
           )}
         </Media.Body>
-        {!is_owner && !showEditForm && (
+        {is_owner && !showEditForm && (
           <MoreDropdown
             handleEdit={() => setShowEditForm(true)}
             handleDelete={handleDelete}
