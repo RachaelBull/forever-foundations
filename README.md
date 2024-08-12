@@ -179,6 +179,10 @@ Before going ahead with too much coding on the project, I created wireframes for
 
 <hr>
 
+# Model Diagrams
+
+![Model Diagrams](/docs/features/wireframes/model-diagrams.png)
+
 # Features
 
 ## The Home Page/Landing Page
