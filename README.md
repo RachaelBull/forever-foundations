@@ -6,7 +6,7 @@ Forever Foundations is a social media based platform designed to help users find
 
 You can visit the website here: [Forever Foundations]([https://forever-foundations-e27644123eb0.herokuapp.com/])
 
-*********Responsive img here*************
+![Forever Foundations](docs/wireframes/responsive.png)
 
 <hr>
 
@@ -149,7 +149,33 @@ project these particular fonts are also played down in areas where they are not 
 
 ![Forever Foundations chosen fonts](docs/features/design/fonts.png)
 
-# WIREFRAMES HERE
+# Wireframes
+
+Before going ahead with too much coding on the project, I created wireframes for the main pages so that I had a solid picture to refer back to of the kind of styling and features I was aiming for.
+
+## Home page as a signed out user
+
+![Home page - signed out](/docs/features/wireframes/wf-home-signed-out.png)
+
+## Home page as a signed in user
+
+![Home page - signed in](/docs/features/wireframes/wf-home-signed-in.png)
+
+## Sign up page
+
+![Sign Up Page](/docs/features/wireframes/wf-sign-up.png)
+
+## Sign in page
+
+![Sign In Page](/docs/features/wireframes/wf-sign-in.png)
+
+## Create a post page
+
+![Create post page](/docs/features/wireframes/wf-create-post.png)
+
+## Profile Page
+
+![Profile Page](/docs/features/wireframes/wf-profile.png)
 
 <hr>
 
@@ -333,4 +359,16 @@ Navigate to the repository that you are wishing to Fork.
 
 ## Media Credits
 
-- 
+- The No Results image was obtained [Here](https://www.flaticon.com/free-icons/no-results)
+- Lena's profile picture was obtained [Here](www.freepik.com)
+- Marco's profile picture was obtained [Here](https://www.freepik.com/free-photo/young-bearded-man-cafe-street-smokes-cigarette-romantic-guy-white-shirt-cap-suspenders-city-peaky-blinders-old-fashionable-retro_24299480.htm#fromView=search&page=1&position=2&uuid=9302bb8c-82d4-4fb9-ab3d-6ccfab8eeca3)
+- Harriet's profile picture was obtained [Here](https://www.freepik.com/free-photo/elegant-woman-long-white-dress_4209524.htm#fromView=search&page=1&position=50&uuid=b16188e9-2fd7-409c-a244-3daed59041a0)
+- Jasper's proifle picture was obtained [Here](https://www.freepik.com/free-photo/van-gogh-portrait_32473797.htm#fromView=search&page=1&position=5&uuid=991848b9-c8fa-4770-8b26-508ea7c4ec39)
+- Marley's profile picture was obtained [Here](https://www.freepik.com/free-ai-image/portrait-millennial-woman-living-country-side-after-moving-from-city_151970673.htm#fromView=search&page=1&position=29&uuid=8ebeb4b9-ad65-49e9-a68a-2d8190f770a5)
+- All post images were obtained [Here](https://www.shutterstock.com/discover/stock-assets-uk-0220?cr=ec&ds_ag=FF%3DBrand-Shutterstock_Exact_AU%3DProspecting&ds_agid=58700001307463988&ds_cid=71700000014796324&ds_eid=700000001391652&gad_source=1&gclid=CjwKCAjwwr6wBhBcEiwAfMEQs86p6Q9wc4ECy596PyYFrjOs97qUJ-EtqQahUwRw1lh6sKMIGQj74hoCh0UQAvD_BwE&gclsrc=aw.ds&kw=shutterstock&pl=PPC_GOO_UK_BD-675923695165&utm_campaign=CO%3DUK_LG%3DEN_BU%3DIMG_AD%3DBRAND_TS%3Dlggeneric_RG%3DEUAF_AB%3DACQ_CH%3DSEM_OG%3DCONV_PB%3DGoogle&utm_medium=cpc&utm_source=GOOGLE)
+
+## Help Resources
+
+- The [React Bootstrap website](https://react-bootstrap-v4.netlify.app/) helped me figure out the design and layout of my website as it offers easy mobile first view styling, saving a lot of time.
+- I used the 'Moments' walkthrough by Code Institute to help with some setup and coding.
+- The Tutoring team have been an amazing help throughout my project and have provided amazing feedback whenever I've come across an error I felt like I needed extra support with.
