@@ -233,3 +233,104 @@ Here is where the user is now able to edit and update their profile:
 
 ## Comments
 
+# Technologies, Libraries and Frameworks Used
+
+* Javascript - this was used to provide interactivity across the site for it's users.
+* HTML - this was used to proive structure to the website.
+* CSS - this was used to add custom styling to the site.
+* React - this is a Javascript Library used for user interface.
+* [Balsamiq](https://balsamiq.com/) - to create the Wireframes shown.
+* [Gitpod](https://www.gitpod.io/) - used as a cross platform IDE to deploy my workspace environment onto Github.
+* [Cloudinary](https://cloudinary.com/) - used to store images.
+* [Google Fonts](https://fonts.google.com/) - used to import the various fonts used.
+* [Lucid](https://lucid.co/) - used to create the Data Models diagram.
+* [Coolor](https://coolors.co/) - used to create the colour palette of the website.
+* [Heroku](https://www.heroku.com/) - used for the hosting and deployment of the site.
+* [Font Awesome](https://fontawesome.com/) - used for the icons across the website.
+* [React Bootstrap](https://react-bootstrap.github.io/) - CSS framework to help build responsive websites.
+* [Github](https://github.com/) - to store and display all files for the website.
+* [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - to troubleshoot, and help solve any bugs.
+* [W3C Markup Validator](https://validator.w3.org/) - to check the source code of my HTML files for any bugs.
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - to check the source code of my CSS file for any bugs.
+
+# Deployment
+
+*Before you can deploy onto Heroku with your frontend you first want to create and ready your backend, information on how to do this will be provided first*
+
+## Create & Ready the API
+
+- Navigate to your workspace and open your env.py file (create one in the main directory if it hasn't already been created).
+- Add the DATABASE_URL value from your cloud-based database and a SECRET_KEY value to the env.py file - note to make sure that this is not visibily pushed to Github.
+- Open your settings.py file and import the env.py file and the DATABASE_URL and SECRET_KEY file paths to keep the information secure.
+- Install Django and then update this to your requirements.txt file.
+- Create your project.
+- Add the STATIC files settings.
+- Create a file within your workspace called Procfile (with a capital P) in the main directory, this will hold your Heroku deployment requirements.
+- If you are including images to your project using cloud-based image storage, add the Cloudinary URL to your env.py file.
+- Add the Cloudinary libraries to INSTALLED APPS in Settings.py.
+- Add your IDE workspace and Heroku to ALLOWED_HOSTS in the Settings.py file.
+- Make migrations and migrate. (python manage.py makemigrations, python manage.py migrate).
+- Create new Django project - *django-admin startproject <home_api>*
+- Create Superuser (email can be left blank) - *python manage.py createsuperuser (username>email>password1>password2)* this so that you can gain access to your admin panel if needed.
+- Create however many apps you intend to use - *python manage.py startapp <nameofapp>*.
+- Make sure your DEBUG is set to false in your Settings.py file before pushing your code and deploying.
+
+## Deploying to Heroku
+
+This site was deployed onto Heroku which is listed above in the technologies used. To do this yourself, please follow these steps:
+
+- Navigate to Heroku and sign up/create an account with them.
+- Click the 'New' button in the top right corner of the page.
+- Select to create a new app.
+- Enter the name you wish to use for the app.
+- Select a region listed and create the app.
+- Connect your Heroku project to your GitHub repository. Under deployment, choose GitHub and find the repository you'd like to connect.
+- Once connected, go to the Settings tab and click on 'Reveal Config Vars'. Add the environment key & value variables used above in your env.py file (CLOUDINARY_URL, DATABASE_URL & SECRET_KEY).
+- Next add DISABLE_COLLECTSTATIC and add 1 if this is to be disabled to prevent errors.
+- Navigate to the Deploy section, click on Github for the deployment method (automatic or manual) and confirm.
+- At the bottom of the deploy section, make sure you are connected to the main branch and then click Deploy Branch.
+- You are now able to view your site if no errors occured.
+
+## Connect the API & the Frontend
+
+*Adding your Client Origin URLS*
+
+* In Heroku, navigate to Settings:
+* Add the following Config Vars; 'CLIENT_ORIGIN' : 'Your deployed React app URL', 'CLIENT_ORIGIN_DEV' : 'Your Gitpod preview link, without trailing slash'
+
+*Frontend Requirements*
+
+* Install Axios: 'npm install axios' (in the terminal).
+* Create a folder in your Frontend repository called 'api' and then proceed to create a file inside named 'axiosDefaults.js'.
+  * To configure Axios you will need to:
+    -  Import Axios in 'axiosDefaults.js'
+    -  Set up Axios:
+       -  axios.defaults.baseURL = "Your Input"
+          axios.defaults.headers['Content-Type'] = 'multipart/form-data';
+          axios.defaults.withCredentials = true;
+    - Import Axios into your App.js file
+
+*Please do note that after any changes have been made to your reponsitories then you will need to manually deploy each time you push new code if you do not have automatic deployments active*
+
+## Cloning
+
+Navigate the the repository that you are wishing to clone.
+
+- Click on the 'Code' drop down button.
+- Click on HTTPS and copy the repository link provided.
+- Open your IDE of choice (please ensure that you have git installed for the next steps).
+- Type 'git clone copied-git-url' into the terminal.
+- The project will now be cloned and ready for you to use.
+
+## Forking
+
+Navigate to the repository that you are wishing to Fork.
+
+- On the top right of the page under the header, click the 'Fork' button.
+- This will now have created a duplicate of the full project in your GitHub Repository ready for you to use.
+
+# Credits
+
+## Media Credits
+
+- 
