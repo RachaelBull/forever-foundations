@@ -39,12 +39,12 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
   const handleUnfollow = async (clickedProfile) => {
-    console.log('clickedProfile', clickedProfile);
+    //console.log('clickedProfile', clickedProfile);
     try {
       await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
 
@@ -63,7 +63,7 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -78,7 +78,7 @@ export const ProfileDataProvider = ({ children }) => {
           popularOwners: data,
         }));
       } catch (err) {
-        console.log(err);
+        //console.log(err);
       }
     };
 
